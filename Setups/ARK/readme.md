@@ -18,3 +18,6 @@
 
 **7.** Now simply run the Script and wait for SteamCmd to download everything.
 	 
+**8.** As soon as everything is downloaded, place "server_launch.bat" into your Server Folder.
+
+**9..** If you want to change Server Settings, Rightclick the launch file and edit it. (**OPTIONAL**)

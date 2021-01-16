@@ -2,9 +2,9 @@
 cls 
 title ARK Server 
 
-set serverName=Fart Gaming
-set password=lol420
-set adminPassword=notlol420
+set serverName="Fart Gaming"
+set password="lol420"
+set adminPassword="notlol420"
 set /A port=7777
 set /A queryPort=27015
 set /A playerCount = 16
