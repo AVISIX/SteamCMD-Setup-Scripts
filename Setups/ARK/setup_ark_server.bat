@@ -3,7 +3,7 @@
 :: - 376030 (Survival Evolved)
 :: - 445400 (Survival of The Fittest)
 :: *************************************
-set /A serverType=3760300
+set /A serverType=376030
 
 
 
