@@ -3,7 +3,7 @@
 :: - 376030 (Survival Evolved)
 :: - 445400 (Survival of The Fittest)
 :: *************************************
-set /A serverType=376030
+set /A serverType=3760300
 
 
 
@@ -23,16 +23,16 @@ IF EXIST "%cd%\steamcmd.exe - Shortcut.lnk" (
     set path="%cd%\steamcmd.exe - Shortcut.lnk"
     GOTO Setup
 )
-echo No Shortcut found.
+echo [WARNING] No Shortcut found.
 
 echo Searching for executable ...
 IF EXIST "%cd%\Steam CMD\steamcmd.exe" (
     set path="%cd%\Steam CMD\steamcmd.exe"
     GOTO Setup  
 )
-echo No executable found.
+echo [WARNING] No executable found.
 
-echo (%time%) Setup failed, Steamcmd not found.
+echo [ERROR] Setup failed, Steamcmd not found.
 pause 
 exit 0
 
@@ -56,6 +56,8 @@ exit 0
             echo Updating ARK Survival of The Fittest Server ... 
         )
         start "" %path% +login anonymous +force_install_dir "%cd%/ARK (SOTF)/" +app_update %serverType% +quit
-    ) else ( echo Invalid Server Type. )
-    pause 
+    ) else ( 
+	echo [ERROR] Invalid Server Type.
+	pause
+    )
 exit 0
