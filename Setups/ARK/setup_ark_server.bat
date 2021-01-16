@@ -36,33 +36,26 @@ echo (%time%) Setup failed, Steamcmd not found.
 pause 
 exit 0
 
-
-
-
 :Setup 
     echo SteamCmd Found, starting setup (%path%)...
-    
     if %serverType% == 376030 (
-        set folderName="ARK (Survival Evolved)"
-
+        echo ARK  Survival Evolved setup starting ...
         if not exist "%cd%\ARK (SE)" (
-            echo ARK Survival Evolved setup starting ...
+            echo ARK  Survival Evolved setup starting ...
             mkdir "%cd%\ARK (SE)" 
         ) else ( 
             echo Updating ARK Survival Evolved Server ... 
         )
+        start "" %path% +login anonymous +force_install_dir "%cd%/ARK (SE)/" +app_update %serverType% +quit
     ) else if %serverType% == 445400 ( 
-        set folderName="ARK (Survival of The Fittest)"
-
         echo ARK Survival of The Fittest setup starting ...
-
         if not exist "%cd%\ARK (SOTF)" (
             echo ARK Survival of The Fittest setup starting ...
             mkdir "%cd%\ARK (SOTF)" 
         ) else ( 
-            echo Updating ARK Survival Evolved Server ... 
+            echo Updating ARK Survival of The Fittest Server ... 
         )
+        start "" %path% +login anonymous +force_install_dir "%cd%/ARK (SOTF)/" +app_update %serverType% +quit
     ) else ( echo Invalid Server Type. )
-
-    start "" %path% +login anonymous +force_install_dir %cd%/%folderName%/ +app_update %serverType% +quit
+    pause 
 exit 0
