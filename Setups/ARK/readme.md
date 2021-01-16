@@ -12,7 +12,7 @@
 
 **5.** Place the Script and the Shortcut into that Folder.
 
-**6.** If you want to setup a "Survival of the Fittest" Server (OPTIONAL):
+**6.** If you want to setup a "Survival of the Fittest" Server (**OPTIONAL**):
 - Rightclick the Script and Edit it
 - Change the number after "serverType=" to 445400
 
